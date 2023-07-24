@@ -10,7 +10,7 @@ const Posts = ({posts}:any) => {
         </h1>
         <p className="mt-3 text-orange-800 text-xl">
             Blogs that are loved by the community. Updated every hour.
-            Get them at <span><a href="https://jsonplaceholder.typicode.com/posts" target='_blank'>https://jsonplaceholder.typicode.com/</a></span>
+            Get them at <span className=' hover:text-white'><a href="https://jsonplaceholder.typicode.com/posts" target='_blank'>https://jsonplaceholder.typicode.com/</a></span>
         </p>
     </div>
     <div className="mt-12 grid gap-4 divide-y md:grid-cols-2 md:divide-y-0 lg:grid-cols-3">

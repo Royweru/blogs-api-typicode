@@ -11,16 +11,20 @@ import React, { Suspense } from "react";
 //   };
 function App() {
   const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false)
   
   useEffect(() => {
     const fetchData = async () => {
       try {
-        
+        setIsLoading(true)
         const response = await axios.get("/posts");
         setData(response.data);
         console.log(data);
       } catch (error) {
         console.error("oops could not fetch:", error);
+      }
+      finally{
+        setIsLoading(false)
       }
     };
 
@@ -33,7 +37,12 @@ function App() {
         <Suspense
           fallback={<div ><p className=" text-4xl text-red-500">LOADING</p></div>}
         >
-          <Posts posts={data} />
+          {isLoading && 
+            <p className=" text-4xl text-red-500">LOADING....</p>
+          }
+          {!isLoading && 
+           <Posts posts={data} />
+          }
         </Suspense>
       </div>
     </>
