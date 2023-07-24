@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import Posts from "./components/Posts";
 import { useState, useEffect } from "react";
 import axios from "./api/axios";
-import React, { Suspense } from "react";
+import  { Suspense } from "react";
 // type blog = {
 //     userId: number;
 //     id: number;

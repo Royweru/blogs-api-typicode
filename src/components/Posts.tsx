@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const Posts = ({posts}:any) => {
     
@@ -15,7 +15,7 @@ const Posts = ({posts}:any) => {
     </div>
     <div className="mt-12 grid gap-4 divide-y md:grid-cols-2 md:divide-y-0 lg:grid-cols-3">
         {
-            posts.map((item, idx) => (
+            posts.map((item:any, id:any) => (
                 <article className="mt-5 pt-8 md:pt-0" key={idx}>
                     <a href={item.href}>
                         
