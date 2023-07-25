@@ -21,7 +21,7 @@ function App() {
         setData(response.data);
         console.log(data);
       } catch (error) {
-        console.error("oops could not fetch:", error);
+        console.error("oops! could not fetch:", error);
       }
       finally{
         setIsLoading(false)
@@ -38,7 +38,7 @@ function App() {
           fallback={<div ><p className=" text-4xl text-red-500">LOADING</p></div>}
         >
           {isLoading && 
-            <p className=" text-4xl text-red-500">LOADING....</p>
+            <p className=" text-4xl text-red-500 font-mono">LOADING....</p>
           }
           {!isLoading && 
            <Posts posts={data} />
